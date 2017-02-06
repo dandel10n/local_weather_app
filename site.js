@@ -1,3 +1,6 @@
+// TODO: 1.сделать конфигурируемые error и success в getWeather; 2. ссделать дефолтный бэкграунд
+
+
 var STORAGE = {
     city_name: null,
     location: {
@@ -55,7 +58,6 @@ var displayDegree = function(temperature) {
 };
 
 var displayWeather = function(data) {
-
     if (data.cod !== 200) {
         geo_errors();
     } else {
