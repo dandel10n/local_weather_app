@@ -1,0 +1,199 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*-------------------------------------
+Style
+-------------------------------------*/
+
+html,
+body {
+    text-align: center;
+    font: 24px 'Permanent Marker', cursive;
+    height: 100%;
+    color: #333;
+    overflow: hidden;
+}
+
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom:0;
+    background: #333;
+    z-index: 30;
+}
+
+.preloader_container small{
+    font-size:25px;
+}
+
+.preloader_container {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    margin-left: -125px;
+    margin-top: -75px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    line-height: 35px;
+}
+
+#preloader .preloader_animation {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    background: url(oval.svg) 50% 50% no-repeat;
+    background-size: 41px;
+    margin: -16px 0 0 -16px;
+}
+
+
+.container {
+    height: 100%;
+    padding-top: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+
+.weather_block {
+    width: 400px;
+    min-height: 250px;
+    padding: 40px 0;
+    margin: auto;
+    background-color: rgba(192,192,192, 0.3);
+    border-radius: 8px;
+}
+
+.weather_info {
+  display: none;
+}
+
+.weather_info,
+#search-by-name {
+    background-color: rgba(242, 242, 242, 0.3);
+    border-radius: 8px;
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+}
+
+h1 {
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 35px;
+}
+
+#search-by-name,
+.open-form-button {
+    display: none;
+    margin: auto;
+}
+
+#search-by-name.active,
+.open-form-button.active,
+.weather_info.active {
+    display: block;
+}
+
+input {
+    font: 14px 'Permanent Marker', cursive;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.temperature,
+.unit {
+    display: inline-block;
+}
+
+.unit,
+.open-form-button,
+#search-button {
+    font: 24px 'Permanent Marker', cursive;
+    background-color: #e6e6e6;
+    border: 0;
+    border-radius: 4px;
+    color: #333;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.open-form-button,
+#search-button {
+    font-size: 16px;
+}
+
+.unit:focus,
+.open-form-button:focus,
+#search-button:focus,
+.unit::-moz-focus-inner,
+.open-form-button::-moz-focus-inner,
+#search-button::-moz-focus-inner {
+    outline:none !important;
+    border: 0;
+    padding: 5px;
+}
+
+.unit:hover,
+#search-button:hover {
+    color: #fff;
+    background-color: #666;
+}
+
+.values {
+    margin: 20px;
+}

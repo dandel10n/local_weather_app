@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your weather</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="preloader_container">
+            <span class="preloader_animation"></span><br>Please, wait<br><small>loading</small>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <section class="weather_block">
+            <h1>Local Weather App</h1>
+
+            <button type="button" class="open-form-button active">Find by city name</button>
+            <form action="/" id="search-by-name">
+                Enter your city:
+                <div class="form_container">
+                    <input type="text" name="city" placeholder="Minsk" id="cityName">
+                    <input type="submit" value="Show the weather" id="search-button">
+                </div>
+            </form>
+
+            <div class="weather_info active">
+                <p><span class="city"></span><span class="country"></span></p>
+                <div><img class="weatherIcon" src="" alt="weather icon"></div>
+                <p class="weatherDescription"></p>
+
+                <div class="values">
+                    <p class="temperature"></p>
+                    <button type="button" class="unit">C</button>
+                </div>
+
+                <p class="error-message"></p>
+            </div>
+
+            <button id="pageRefresh">Refresh</button>
+
+        </section>
+    </div>
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="site.js"></script>
+</body>
+</html>
