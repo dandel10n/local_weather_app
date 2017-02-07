@@ -1,4 +1,4 @@
-// TODO: 1.сделать конфигурируемые error и success в getWeather; 2. ссделать дефолтный бэкграунд
+// TODO: сделать дефолтный бэкграунд
 
 
 var STORAGE = {
@@ -116,14 +116,16 @@ var getWeatherByName = function(name) {
         "q": name
     };
 
-    getWeather(dataParameters);
+    var successResult = function() {
+        $('.weather_info').addClass('active');
+        $("#search-by-name").removeClass('active');
+        $('.open-form-button').addClass('active');
+    };
 
-    $('.weather_info').addClass('active');
-    $("#search-by-name").removeClass('active');
-    $('.open-form-button').addClass('active');
+    getWeather(dataParameters, successResult);
 };
 
-var getWeather = function(dataParameters) {
+var getWeather = function(dataParameters, successResult) {
     var weatherApiUrl = 'http://api.openweathermap.org/data/2.5/weather';
     var ajaxData = {
         "units": "metric",
@@ -144,6 +146,10 @@ var getWeather = function(dataParameters) {
         success: function(data) {
             displayWeather(data);
             $('.error-message').html('');
+
+            if (successResult) {
+                successResult();
+            }
         }
     });
 };
