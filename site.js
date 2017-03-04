@@ -1,6 +1,3 @@
-// TODO: сделать дефолтный бэкграунд
-
-
 var STORAGE = {
     city_name: null,
     location: {
